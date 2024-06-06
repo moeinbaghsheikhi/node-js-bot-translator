@@ -45,4 +45,4 @@ const farazinDestinationLanguage = {
     }
 };
 
-module.exports = { homeMenuinlineKeyboard, googleDestinationLanguage, microsoftDestinationLanguage }
+module.exports = { homeMenuinlineKeyboard, googleDestinationLanguage, microsoftDestinationLanguage, farazinDestinationLanguage }

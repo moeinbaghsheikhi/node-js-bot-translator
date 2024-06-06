@@ -44,3 +44,9 @@ bot.on('callback_query', (query) => {
 bot.on('polling_error', (error) => {
     console.log("Polling Error: ", error)
 })
+bot.on('webhook_error', (error) => {
+    console.log("WebHook Error: ", error)
+})
+bot.on('error', (error) => {
+    console.log("General Error: ", error)
+})

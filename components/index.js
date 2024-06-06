@@ -12,4 +12,37 @@ const homeMenuinlineKeyboard = {
     }
 };
 
-module.exports = { homeMenuinlineKeyboard }
+const googleDestinationLanguage = {
+    reply_markup: {
+        inline_keyboard: [
+        [
+            { text: 'انگلیسی', callback_data: 'en' },
+            { text: 'فارسی', callback_data: 'fa' }
+        ]
+        ]
+    }
+};
+
+const microsoftDestinationLanguage = {
+    reply_markup: {
+        inline_keyboard: [
+        [
+            { text: 'انگلیسی', callback_data: 'en' },
+            { text: 'فارسی', callback_data: 'fa' }
+        ]
+        ]
+    }
+};
+
+const farazinDestinationLanguage = {
+    reply_markup: {
+        inline_keyboard: [
+        [
+            { text: 'انگلیسی', callback_data: 'fa_en' },
+            { text: 'فارسی', callback_data: 'en_fa' }
+        ]
+        ]
+    }
+};
+
+module.exports = { homeMenuinlineKeyboard, googleDestinationLanguage, microsoftDestinationLanguage }

@@ -22,7 +22,9 @@ const homeMenu = (bot, chatId) => {
 }
 
 const sendTranslateKeyboard = (bot ,chatId, field, command, keyboard, textMessage, messageId) => {
-  client.set(`user:${chatId}:${field}`, command)
+  client.set(`user:${chatId}:${field}`, command, {
+    EX: 180
+  })
   const inline_keyboard = keyboard
   let result = bot.editMessageText(textMessage, {
       chat_id: chatId,
@@ -31,5 +33,12 @@ const sendTranslateKeyboard = (bot ,chatId, field, command, keyboard, textMessag
   })
 }
 
+const sendLanguage = (bot, chatId, lang, message) => {
+  client.set(`user:${chatId}:lang`, lang, {
+    EX: 180
+  })
+  bot.sendMessage(chatId, message)
+}
 
-module.exports = { homeMenu, sendTranslateKeyboard }
+
+module.exports = { homeMenu, sendTranslateKeyboard, sendLanguage }

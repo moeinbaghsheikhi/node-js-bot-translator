@@ -19,26 +19,14 @@ bot.onText(/\/start/, (msg, match) => actions.homeMenu(bot, msg.chat.id));
 
 bot.on('callback_query', (query) => {
     const myActions = ["google", "microsoft", "farazin"]
-
+    const myLangs   =  ["fa", "en", "fa_en", "en_fa"]
 
     const command = query.data
     const chatId = query.message.chat.id
     const messageId = query.message.message_id
 
-    if(myActions.includes(command)) actions.sendTranslateKeyboard(bot, chatId, 'action', command, components[`${command}DestinationLanguage`], messages.select_language, messageId)
-
-    if(command == "fa"){
-        client.set(`user:${chatId}:lang`, command)
-        bot.sendMessage(chatId, "fa")
-    }
-
-    if(command == "en"){
-        client.set(`user:${chatId}:lang`, command)
-        bot.sendMessage(chatId, "en")
-    }
-
-
-    // bot.sendMessage(chatId, "you click on callback_data :" + command)
+    myActions.includes(command) ? actions.sendTranslateKeyboard(bot, chatId, 'action', command, components[`${command}DestinationLanguage`], messages.select_language, messageId) : false
+    myLangs.includes(command)   ? actions.sendLanguage(bot, chatId, command, messages.send_query) : false
 })
 
 bot.on('polling_error', (error) => {

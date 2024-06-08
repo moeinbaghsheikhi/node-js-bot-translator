@@ -15,10 +15,16 @@ const homeMenuinlineKeyboard = {
 const googleDestinationLanguage = {
     reply_markup: {
         inline_keyboard: [
-        [
-            { text: 'انگلیسی', callback_data: 'en' },
-            { text: 'فارسی', callback_data: 'fa' }
-        ]
+            [
+                { text: 'انگلیسی', callback_data: 'en' },
+                { text: 'فارسی', callback_data: 'fa' }
+            ], [
+                { text: 'اسپانیایی', callback_data: 'es' },
+                { text: 'فرانسوی', callback_data: 'fr' }
+            ],
+            [
+                { text: 'پرتقالی', callback_data: 'pr' }
+            ]
         ]
     }
 };
@@ -26,15 +32,21 @@ const googleDestinationLanguage = {
 const microsoftDestinationLanguage = {
     reply_markup: {
         inline_keyboard: [
-        [
-            { text: 'انگلیسی', callback_data: 'en' },
-            { text: 'فارسی', callback_data: 'fa' }
-        ]
+            [
+                { text: 'انگلیسی', callback_data: 'en' },
+                { text: 'فارسی', callback_data: 'fa' }
+            ], [
+                { text: 'اسپانیایی', callback_data: 'es' },
+                { text: 'فرانسوی', callback_data: 'fr' }
+            ],
+            [
+                { text: 'پرتقالی', callback_data: 'pr' }
+            ]
         ]
     }
 };
 
-const farazinDestinationLanguage = {
+const faraazinDestinationLanguage = {
     reply_markup: {
         inline_keyboard: [
         [
@@ -45,4 +57,4 @@ const farazinDestinationLanguage = {
     }
 };
 
-module.exports = { homeMenuinlineKeyboard, googleDestinationLanguage, microsoftDestinationLanguage, farazinDestinationLanguage }
+module.exports = { homeMenuinlineKeyboard, googleDestinationLanguage, microsoftDestinationLanguage, faraazinDestinationLanguage }

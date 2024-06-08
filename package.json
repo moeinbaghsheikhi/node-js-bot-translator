@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.2",
     "node-telegram-bot-api": "^0.66.0",
     "redis": "^4.6.14"
   }

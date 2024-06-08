@@ -12,7 +12,7 @@ const homeMenu = (bot, chatId) => {
               { text: 'ترجمه با Microsoft (🇺🇸)', callback_data: 'microsoft' }
             ],
             [
-              { text: 'ترجمه با فرازین (🇮🇷)', callback_data: 'farazin' }
+              { text: 'ترجمه با فرازین (🇮🇷)', callback_data: 'faraazin' }
             ]
           ]
         }
